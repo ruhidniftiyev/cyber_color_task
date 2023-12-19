@@ -1,0 +1,22 @@
+{
+  "name": "stackblitz-starters-njr8uu",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "@types/react": "18.2.45",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^9.0.4",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
