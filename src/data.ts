@@ -48,11 +48,11 @@ export const items = sizes.reduce(
               color,
             },
           ],
-          []
+          [],
         ),
       ],
-      []
+      [],
     ),
   ],
-  []
+  [],
 );

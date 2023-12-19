@@ -4,7 +4,7 @@ import Menu from './components/Menu';
 import './style.css';
 import './scss/app.scss';
 import { useAppDispatch } from './hooks/useAppDispatch';
-import { selectAll, selectButtons } from './store/slices/ButtonSlice';
+import { selectButtons } from './store/slices/ButtonSlice';
 import { useAppSelector } from './hooks/useAppSelector';
 
 export const App: FC<{ items: any[] }> = ({ items = [] }) => {
@@ -15,13 +15,9 @@ export const App: FC<{ items: any[] }> = ({ items = [] }) => {
     dispatch(selectButtons(buttonName));
   };
 
-  const selectAllCLick = (items) => {
-    dispatch(selectAll(items));
-  };
-
   return (
     <Fragment>
-      <Menu selectedButtons={selectedButtons} selecting={selectAllCLick(items)} />
+      <Menu selectedButtons={selectedButtons} selecting={items.map((item) => item.name)} />
       <ul className="List">
         {items.map((item) => (
           <li
