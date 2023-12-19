@@ -1,19 +1,27 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedButton: '',
+  selectedButtons: [],
 };
 
 const buttonSlice = createSlice({
   name: 'button',
   initialState,
   reducers: {
-    selectButton: (state, action: PayloadAction<string>) => {
-      state.selectedButton = action.payload;
+    selectButtons: (state, action: PayloadAction<string>) => {
+      state.selectedButtons.includes(action.payload)
+        ? (state.selectedButtons = state.selectedButtons.filter(
+            (button) => button !== action.payload,
+          ))
+        : state.selectedButtons.push(action.payload);
     },
+    selectAll: (state, action: PayloadAction<string[]>) => {
+      state.selectedButtons = action.payload;
+    },
+    searchButtons: (state, action: PayloadAction<string>) => {},
   },
 });
 
 export default buttonSlice.reducer;
 
-export const { selectButton } = buttonSlice.actions;
+export const { selectButtons, selectAll } = buttonSlice.actions;

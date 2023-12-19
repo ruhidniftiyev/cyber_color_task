@@ -1,12 +1,17 @@
 .menu {
+  padding: 10px;
   background-color: lightblue;
   height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
 
   &__selected {
     display: flex;
+
+    &__list {
+      display: flex;
+    }
 
     p {
       font-size: 18px;

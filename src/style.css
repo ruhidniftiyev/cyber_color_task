@@ -7,6 +7,7 @@
 }
 
 .List__item {
+  list-style-type: none;
   cursor: pointer;
   line-height: 60px;
   text-align: center;
@@ -79,4 +80,9 @@
 
 .List__item--silver {
   background-color: #dddddd;
+}
+
+.selected {
+  transform: scale(1.2);
+  transition: 0.4s;
 }
