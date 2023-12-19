@@ -1,7 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import buttonSlice from './slices/ButtonSlice';
 
 const rootReducer = combineReducers({
-  
+  buttonSlice,
 });
 
 export const setupStore = () => {

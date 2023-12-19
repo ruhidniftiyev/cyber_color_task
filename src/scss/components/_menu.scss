@@ -1,0 +1,16 @@
+.menu {
+  background-color: lightblue;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__selected {
+    display: flex;
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
